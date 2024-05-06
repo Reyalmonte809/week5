@@ -33,4 +33,4 @@ function parsePartCode(partCode) {
 let partCode1 = "xyz-1234-L";
 let part1 = parsePartCode(partCode1);
 
-console.log( "Supplier " + part1.supplierCode + " Product Number: " + part1.productNumber + " size " + part1.size);
+console.log( "Supplier " + part1.supplierCode + " Product Number: " + part1.productNumber + " size " + part1.size); 
