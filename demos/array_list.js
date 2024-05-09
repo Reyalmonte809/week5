@@ -87,6 +87,7 @@ console.log(emp)
 console.log(emp.name2, emp.employeeId, emp.jobTitle, emp.payRate)
 
 
+
 let emp2 = {
     employeeId: "2",
     name2: "Elisha",
