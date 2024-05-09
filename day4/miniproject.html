@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="miniProject.js"></script> -->
+</head>
+
+<body>
+    <select id="menuElement">
+        <option value="">Pick a Menu item</option>
+        <option value="drinks">Drinks</option>
+        <option value="entrees">Entrees</option>
+        <option value="desserts">Desserts</option>
+    </select>
+    <select id="itemListElement"></select>
+</body>
+<script>
+    let menu = {
+        drinks: [
+            "Water", "Tea", "Sweet Tea",
+            "Coke", "Dr. Pepper", "Sprite"
+        ],
+        entrees: [
+            "Hamburger w/ Fries",
+            "Grilled Cheese w/ Tater Tots",
+            "Grilled Chicken w/ Veggies",
+            "Chicken Fried Steak w/ Mashed Potatoes",
+            "Fried Shrimp w/ Coleslaw",
+            "Veggie Plate"
+        ],
+        desserts: [
+            "Cheesecake", "Chocolate Cake", "Snickerdoodle Cookie"
+        ]
+    };
+
+document.addEventListener("DOMContentLoaded", e=> {
+    const menuElement = document.getElementById("menuElement");
+    const itemListElement = document.getElementById("itemListElement");
+
+    menuElement.addEventListener("change", e=>{
+        const key = menuElement.value
+        const stringList = menu [key];
+        itemListElement.innerHTML = "";
+        for(text of stringList){
+            const option = document.createElement("option")
+            option.innerText = text;
+            itemListElement.appendChild(option)
+        }
+    });
+});
+
+</script>
+
+</html>
