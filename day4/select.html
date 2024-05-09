@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="menu">
+        <option value="">Default Choice</option>
+        <!-- <option value=""></option> -->
+    </select>
+    <select name="output" id="output"></select>
+        <div id="details">?</div>
+    
+</body>
+<script>
+    const categories = [{ id: 111, name: "Drinks" } ,{ id: 222, name: "Food" }];
+    const items = [
+        {cat:111, id:1111, name:"Chocolate Milk", price:3.00},
+        {cat:111, id:2222, name:"Coffee", price: 5.00},
+        {cat:222, id:3333, name:"Pizza", price: 15.00},
+        {cat:222, id:4444, name:"Tiramisu (Dessert)", price: 10.00},
+
+        
+    ];
+
+
+    for (cat of categories) {
+        const opt = document.createElement("option");
+        opt.value = cat.id;
+        opt.innerText = cat.name;
+        // console.log(cat.name)
+        menu.appendChild(opt);
+    }
+
+    menu.addEventListener("change", (event)=>{
+        output.innerHTML = `<option value="">Default Item</option>`;
+        for (item of items){
+            if(menu.value == item.cat){
+                const opt = document.createElement("option");
+                opt.value = item.id;
+                opt.innerText = item.name;
+                output.appendChild(opt);
+            }
+        }
+    });
+
+    output.addEventListener("change", (event)=>{
+        for(item of items){
+            if(output.value == item.id){
+                details.innerText = "$" + item.price.toFixed(2);
+            }
+        }
+    });
+</script>
+
+</html>
