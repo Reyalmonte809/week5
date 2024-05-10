@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="/TouristBureau/style/common.css">
+        <title>Tour the Wilderness</title>
+    </head>
+    <body>
+        <nav class="navbar" id="navbar">
+            <a href="/index.html">Wilderness</a>
+            <a href="/area.html">Warning</a>
+            <a href="/TouristBureau/HikingPage/hiking.html">Tour the Wilderness</a>
+            <a href="/TouristBureau/ActivitiesPage/activities.html">Tame The Wild</a>
+        </nav>
+        <div class="topimage" id="topimage">
+            <img src="/TouristBureau/images/forest.jpg" alt="top">
+        </div>
+        <div class="form" id="form">
+            <fieldset>
+                <legend>Checkout</legend>
+                <span>Price: </span><input type="number" id="price" placeholder="price"><br>
+                <span>How many tickets (1-9): </span><input type="number" id="ticketsNeed" placeholder="# OF TICKETS NEEDED"><br>
+                <span>CardHolder Name: </span><input type="text" id="cardName" placeholder="First & Last Name"><br>
+                <span>Credit Card Number: </span><input type="text" id="cardInfo" placeholder=" 0123-4567-8900-1234"><br>
+                <span>Email Address: </span><input type="text" id="email" placeholder="Email Address"><br>
+                <span>Total Amount: </span><input type="text" id="totalCost" placeholder="$0.00" readonly><br>
+                <button class="btn btn-primary" id="buttonCheckout"><a href="/TouristBureau/ActivitiesPage/activities.html">Checkout</a></button>
+
+            </fieldset>
+        </div>
+        <footer>
+            <p>&copy;Wilderness Tourist Bureau</p>
+        </footer>
+    </body>
+    <script>
+        price.value = localStorage.price
+        ticketsNeed.addEventListener("change", ()=>{
+            totalCost.value = Number(price.value) * Number(ticketsNeed.value)
+        })
+        // document.getElementById("buttonCheckout").addEventListener("click", ()=>{
+
+       
+        // let rate = 0;
+        // let tickets = Number(document.getElementById("ticketsNeed").value);
+        // let mult = activities.price;
+        // let cost = tickets * mult;
+        
+        // for(price of activities){
+        //     const option = document.createElement("option");
+        //     option.innerText = cost ;
+
+    //     }
+    
+    // });
+    </script>
+</html>

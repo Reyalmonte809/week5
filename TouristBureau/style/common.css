@@ -8,11 +8,13 @@ body {
 }
 #navbar {
     background-color: forestgreen;
+    border:  solid transparent;
+    padding: .5rem;
 }
 .navbar :hover{
     color: burlywood;
-    border: 1px solid green;
-    padding: .5rem;
+    border: .1px solid green;
+
 }
 #topimage img {
     height: 200px;
@@ -34,15 +36,16 @@ body {
     margin-right: auto;
     display: block;
     height: 500px;
+    margin-bottom: 3rem;
 }
 footer {
     background-color: forestgreen;
     text-align: center;
     color: burlywood;
-    position: absolute;
+    position: fixed;
     width: 100%;
     margin-top: 2rem;
-   
+    bottom:0;
 }
 #select{
     text-align: center;
@@ -58,7 +61,7 @@ footer {
 
 #details{
     font-size: 20px;
-    
+
 }
 
 .menu {
@@ -75,4 +78,40 @@ footer {
     margin-top: 4rem;
     margin-right: auto;
     margin-left: auto;
+}
+
+#details a {
+    padding: .15rem 1rem;
+    background-color: blue;
+    border-radius: 1rem;
+
+
+}
+#outputElement{
+    margin-top: 1rem;
+}
+
+#form{
+    max-width: 50%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: #8b6c5c 5px solid;
+    box-shadow: .15rem .25rem;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+    text-align: center;
+    background-color: ;
+}
+#buttonCheckout{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+input{
+    margin: .5rem;
+}
+
+legend {
+    font-family: cursive ;
+    text-decoration: underline;
 }

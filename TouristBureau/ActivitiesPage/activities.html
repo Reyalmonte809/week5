@@ -36,15 +36,15 @@
     </footer>
 </body>
 <script>
-    for(cat of categories){
+    for (cat of categories) {
         const option = document.createElement("option");
         option.innerText = cat;
         menu.appendChild(option)
     }
-    menu.addEventListener("change", (event)=>{
+    menu.addEventListener("change", (event) => {
         outputElement.innerHTML = `<option value="">Choose an Activity</option>`;
-        for (item of activities){
-            if(menu.value == item.category){
+        for (item of activities) {
+            if (menu.value == item.category) {
                 const opt = document.createElement("option");
                 opt.value = item.id;
                 opt.innerText = item.name;
@@ -52,14 +52,27 @@
             }
         }
     });
-    outputElement.addEventListener("change", (event) =>{
-        for(item of activities){
-            if(outputElement.value == item.id)
-            details.innerHTML = [item.name , item.description, item.location,  "$" + item.price]
+    outputElement.addEventListener("change", (event) => {
+        for (item of activities) {
+            if (outputElement.value == item.id) {
+                details.innerText = `
+                ${item.name};
+                ${item.description};
+                ${"Address: " + item.location};
+                ${"$ " + item.price}`;
+                if(item.price  > 0 ) {
+                    details.innerHTML += `
+                    <a href= "./checkout.html" >buy tickets</a>
+                    `;
+                    localStorage.price = item.price;
+                    localStorage.name = item.name;
+                }
+            } 
+
             // details.appendChild(outputElement)
         }
     })
-    
+
 </script>
 
 </html>
