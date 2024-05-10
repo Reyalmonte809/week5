@@ -1,0 +1,56 @@
+a {
+    color:antiquewhite;
+    text-decoration: none;
+    font-size: 20px ;
+}
+body {
+    background-color: lightgreen;
+}
+#navbar {
+    background-color: forestgreen;
+}
+.navbar :hover{
+    color: burlywood;
+    border: 1px solid green;
+    padding: .5rem;
+}
+#topimage img {
+    height: 200px;
+    max-width: 100%;
+    width: 100%
+}
+.title, .mainbody{
+    text-align: center;
+    color: darkgreen
+}
+.mainbody {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+}
+
+#bottomimage img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 500px;
+}
+footer {
+    background-color: forestgreen;
+    text-align: center;
+    color: burlywood;
+    position: absolute;
+    width: 100%;
+    margin-top: 2rem;
+   
+}
+#select{
+    text-align: center;
+    border: 5px solid  #8b6c5c;
+    box-shadow: .15rem .15rem;
+    max-width: 50%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
