@@ -26,19 +26,40 @@
         <select class="outputElement" id="outputElement">
             <option value="">Choose an Activity </option>
         </select>
-        <div>?</div>
+        <div id="details"> </div>
+    </div>
+    <div class="act" id="act">
+        <img src="/TouristBureau/images/hiking.jpg">
     </div>
     <footer>
         <p>&copy;Wilderness Tourist Bureau</p>
     </footer>
 </body>
 <script>
-    for(cat of menu){
+    for(cat of categories){
         const option = document.createElement("option");
         option.innerText = cat;
         menu.appendChild(option)
-
     }
+    menu.addEventListener("change", (event)=>{
+        outputElement.innerHTML = `<option value="">Choose an Activity</option>`;
+        for (item of activities){
+            if(menu.value == item.category){
+                const opt = document.createElement("option");
+                opt.value = item.id;
+                opt.innerText = item.name;
+                outputElement.appendChild(opt);
+            }
+        }
+    });
+    outputElement.addEventListener("change", (event) =>{
+        for(item of activities){
+            if(outputElement.value == item.id)
+            details.innerHTML = [item.name , item.description, item.location,  "$" + item.price]
+            // details.appendChild(outputElement)
+        }
+    })
+    
 </script>
 
 </html>
