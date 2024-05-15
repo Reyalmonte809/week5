@@ -135,3 +135,33 @@ legend {
     text-align: center;
     margin-bottom: 5rem;
 }
+
+#selector{
+    text-align: center;
+    border: 5px solid  #8b6c5c;
+    box-shadow: .15rem .15rem;
+    max-width: 50%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    padding: 1rem ;
+    border-radius: 1rem;
+    margin-bottom: 8rem;
+}
+
+.inputElement {
+    border-radius: 1rem;
+    text-align: center;
+}
+#hikingImage, #mapImage{
+    border: none;
+    display: block;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px ; 
+    width: 100% ;
+    padding: 1rem;
+    opacity: 0;
+}
